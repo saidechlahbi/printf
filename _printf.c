@@ -1,13 +1,12 @@
 #include "main.h"
 /**
  * if_specifier - Function that compare the specifier to get.
- * 
  * the function of the specifier.
  * @spec: character argument.
- * 
+ *
  * @s: character argument.
  * Return: i to get the first index from the spec[i].
- * 
+ *
  */
 
 int if_specifier(choose_tt spec[], char s)
@@ -26,7 +25,7 @@ int if_specifier(choose_tt spec[], char s)
  * string - Function that print String.
  *
  *@arg: Variadic Arguments from user [String]
- * 
+ *
  * Return: Length of string
  */
 
