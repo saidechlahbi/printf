@@ -18,7 +18,7 @@ typedef struct choose
 {
 	char c;
 	int (*ptr)(va_list arg);
-} choose_t;
+} choose_tt;
 int _putchar(char c);
 int _puts(char *str);
 int _printf(const char *format, ...);
