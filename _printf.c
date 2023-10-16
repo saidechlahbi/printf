@@ -114,7 +114,7 @@ int _printf(const char *format, ...)
 	int len = 0, f = 0;
 	int spec_idx;
 
-	choose_t spec[] = {{'c', ch}, {'s', string}, {'d', decimal},
+	choose_tt spec[] = {{'c', ch}, {'s', string}, {'d', decimal},
 {'i', decimal}, {'r', reverse}, {'R', rot13}, {'b', binary},
 {'X', hex_upper}, {'x', hex_lower}, {'o', octal}, {'u', un_int}, {'p', po}};
 	if (format == NULL)
