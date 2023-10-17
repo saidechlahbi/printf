@@ -11,7 +11,7 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	int countt;
+	int count;
 
 	func_printer printers[] = {
 		{"c", pr_char},
@@ -29,10 +29,10 @@ int _printf(const char *format, ...)
 
 	va_start(ap, format);
 
-	countt = prf_looper(format, printers, ap);
+	count = prf_looper(format, printers, ap);
 
 	va_end(ap);
 
-	return (countt);
+	return (count);
 }
 
