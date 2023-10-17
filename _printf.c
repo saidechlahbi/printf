@@ -1,12 +1,15 @@
 #include "main.h"
 #include <stdarg.h>
-#include <stdio.h>
+
 
 /**
- * _printf - home made printf.
- * @format: array of things to be printed.
- * Return: number of characters printed.
+ * _printf - Custom printf function.
+ *
+ * @format: An array of items to be printed.
+ *
+ * Return: The number of characters printed.
  */
+
 
 int _printf(const char *format, ...)
 {
