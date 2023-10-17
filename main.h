@@ -5,7 +5,6 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
-
 /* helpers */
 int _putchar(char c);
 int _puts(char *str);
@@ -37,9 +36,11 @@ int pr_rot13(va_list arg);
 /* struct */
 
 /**
- * struct func_holder - structor for functions.
- * @symb: characters to the specifier.
- * @print_func: pointer to printer functions.
+ * struct func_holder - structor for functions
+ *
+ * @symb: characters to the specifier
+ * @print_func: pointer to printer functions
+ *
  */
 struct func_holder
 {
@@ -55,3 +56,4 @@ int prf_looper(const char *format, func_printer printers[], va_list ap);
 
 
 #endif /* MAIN_H */
+
