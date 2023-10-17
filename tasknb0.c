@@ -1,12 +1,13 @@
 #include "main.h"
 
 /**
- * pr_char - prints a single char
+ * pr_char - Print a single character.
  *
- * @arg: arguments list
+ * @arg: Argument list.
  *
- * Return: number of characters printed
+ * Return: The number of characters printed.
  */
+
 int pr_char(va_list arg)
 {
 	char c = va_arg(arg, int);
@@ -15,12 +16,13 @@ int pr_char(va_list arg)
 	return (1);
 }
 /**
- * pr_string - prints a string
+ * pr_string - Print a string.
  *
- * @arg: arguments list
+ * @arg: Argument list.
  *
- * Return: number of characters printed
+ * Return: The number of characters printed.
  */
+
 int pr_string(va_list arg)
 {
 	int i;
@@ -37,12 +39,13 @@ int pr_string(va_list arg)
 	return (i);
 }
 /**
- * pr_percent - prints a single percent
+ * pr_percent - Print a single percent character.
  *
- * @arg: arguments list
+ * @arg: Argument list.
  *
- * Return: number of characters printed
+ * Return: The number of characters printed.
  */
+
 
 int pr_percent(va_list __attribute__((__unused__)) arg)
 {
