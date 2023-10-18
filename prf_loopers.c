@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * prf_looper - Looper that iterates through a format.
+ * prf_looper - A looper that iterates through a format.
+ *
  * @format: The format to be printed.
  * @printers: Functions that print each type.
  * @ap: List of arguments.
@@ -11,39 +12,39 @@
 
 int prf_looper(const char *format, func_printer printers[], va_list ap)
 {
-	int m, n, val, count;
+	int i, j, val, count;
 
 	count = 0;
-	for (m = 0; format[m] != '\0'; m++)
+	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (format[m] == '%')
+		if (format[i] == '%')
 		{
-			for (n = 0; printers[n].symb != NULL; n++)
+			for (j = 0; printers[j].symb != NULL; j++)
 			{
-				if (format[m + 1] == printers[n].symb[0])
+				if (format[i + 1] == printers[j].symb[0])
 				{
-					val = printers[n].print_func(ap);
+					val = printers[j].print_func(ap);
 					if (val == -1)
 						return (-1);
 					count += val;
 					break;
 				}
 			}
-			if (printers[n].symb == NULL && format[m + 1] != ' ')
+			if (printers[j].symb == NULL && format[i + 1] != ' ')
 			{
-				if (format[m + 1] != '\0')
+				if (format[i + 1] != '\0')
 				{
-					_putchar(format[m]);
-					_putchar(format[m + 1]);
+					_putchar(format[i]);
+					_putchar(format[i + 1]);
 					count += 2;
 				} else
 					return (-1);
 			}
-			m++;
+			i++;
 		}
 		else
 		{
-			_putchar(format[m]);
+			_putchar(format[i]);
 			count++;
 		}
 	}

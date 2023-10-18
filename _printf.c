@@ -1,17 +1,20 @@
 #include "main.h"
 #include <stdarg.h>
-#include <stdio.h>
+
 
 /**
- * _printf - home made printf.
- * @format: array of things to be printed.
- * Return: number of characters printed.
+ * _printf - Custom printf function.
+ *
+ * @format: An array of items to be printed.
+ *
+ * Return: The number of characters printed.
  */
+
 
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	int countt;
+	int count;
 
 	func_printer printers[] = {
 		{"c", pr_char},
@@ -19,15 +22,6 @@ int _printf(const char *format, ...)
 		{"%", pr_percent},
 		{"i", pr_int},
 		{"d", pr_int},
-		{"b", pr_binary},
-		{"u", pr_unsigned_int},
-		{"o", pr_octal},
-		{"x", pr_hexa},
-		{"X", pr_heXa},
-		{"S", pr_string_special},
-		{"p", pr_pointer},
-		{"r", pr_reverse},
-		{"R", pr_rot13},
 		{NULL, NULL}
 	};
 
@@ -38,10 +32,10 @@ int _printf(const char *format, ...)
 
 	va_start(ap, format);
 
-	countt = prf_looper(format, printers, ap);
+	count = prf_looper(format, printers, ap);
 
 	va_end(ap);
 
-	return (countt);
+	return (count);
 }
 
